@@ -1,3 +1,8 @@
+/*!
+ * jQuery hawkAjax plugin
+ * Author: Thomas Sileo
+ * Licensed under the MIT license
+ */
 (function($, window){
 function resolveURL(url) {
   var base_url = window.location.protocol+"//"+window.location.host;
@@ -34,7 +39,8 @@ $.extend({
                     deferred.resolve(jqXHR, textStatus, req);
                 } else {
                     console.log("Hawk error: response not authenticated");
-                    deferred.reject(jqXHR, textStatus, req);
+                    // TODO a better textStatus
+                    deferred.reject(jqXHR, "unauthenticated", req);
                 };
             };
         }).fail(function(jqXHR, textStatus, req) {

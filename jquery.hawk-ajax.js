@@ -4,6 +4,7 @@
  * Licensed under the MIT license
  */
 (function($, window){
+// TODO a better resolveURL
 function resolveURL(url) {
   var base_url = window.location.protocol+"//"+window.location.host;
   var doc      = document
@@ -31,6 +32,7 @@ $.extend({
             req.setRequestHeader("Authorization", hawkData.field);
             req.artifacts = hawkData.artifacts;
         };
+        // TODO extend the "headers" options instead of before send.
         options = $.extend(options, {beforeSend: beforeSend});
         $.ajax(options).done(function(jqXHR, textStatus, req) {
             if (req.status == 200) {

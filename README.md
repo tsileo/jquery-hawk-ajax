@@ -1,3 +1,3 @@
-# jQuery ajaxHawk plugin
+# jQuery hawkAjax plugin
 
 A jQuery plugin to use the [hawk](https://github.com/hueniverse/hawk) HTTP authentication scheme with ``$.ajax``.

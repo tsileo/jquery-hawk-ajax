@@ -12,7 +12,7 @@ A jQuery plugin to use the [hawk](https://github.com/hueniverse/hawk) HTTP authe
 It works like jQuery ``$.ajax`` except:
 
 - it takes an extra object as first argument containing credentials.
-- the promise will be rejected if the response failed to be authenticated
+- the promise will be rejected if the response failed to be authenticated.
 
 ```javascript
 var credentials = {
@@ -22,5 +22,9 @@ var credentials = {
 };
 $.hawkAjax(credentials, {"url": "/api/endpoint"}).done(function(data, textStatus, req) {
 	console.log(data);
-})
+});
 ```
+
+## License
+
+Copyright (c) 2014 Thomas Sileo and contributors. Released under the MIT license.
